@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список контактов</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/flaticon.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper header_wrapper">
+            <div class="title">Список контактов</div>
+            <div class="btns">
+                <input type="search" class="search hidden">
+                <i class="flaticon-search"></i>
+                <i class="flaticon-garbage"></i>
+            </div>
+        </div>
+    </header>    
+    <main>
+        <div class="wrapper contacts">
+            <div class="contacts__list">
+               
+            </div>  
+        </div>    
+    </main>
+    <div class="wrapper add">
+        <div class="add-contact"><i class="flaticon-user"></i></div>
+        <div class="add-form hidden">
+            <i class="flaticon-cancel"></i>
+            <input type="text" class="add-input add-name" placeholder="Введите имя">
+            <div class="add-phone">
+                <input type="text" class="add-input add-phone-input" placeholder="Номер телефона">
+                <div class="add-phone_btn">Добавить номер</div>
+            </div>
+            <input type="email" class="add-input add-email" placeholder="Введите email">
+            <input type="text" class="add-input add-birthday" placeholder="Введите день рождения">
+            <input type="file" class="add-input add-avatar">
+            <input type="submit" class="add-input add-submit" value="Добавить">
+        </div>
+    </div>    
+    
+    
+    <script class="template" type="text/template">
+		<div class="contact">
+            <img src="{{source}}" alt="">
+            <div class="contact-name">{{name}}</div>
+            <div class="contact-description hidden">
+                <i class="flaticon-edit-1"></i>
+                <img src="{{source}}" alt="">
+                <div class="name">{{name}}</div>
+                <div class="phone">{{phone}}</div>
+                <div class="email">{{email}}</div>
+                <div class="born">{{born}}</div>
+            </div>
+	</script>
+	
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
